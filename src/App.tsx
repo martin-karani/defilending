@@ -21,33 +21,13 @@ function App() {
       setLoading(false);
     }
   };
-  // const ConnectWallet = async () => {
-  //   try {
-  //     const publicKey = await window.ic.plug.requestConnect();
-  //     console.log(`The connected user's public key is:`, publicKey);
-  //     const result = await window.ic.plug.requestBalance();
-  //     console.log(result);
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // };
-
-  const increment = async () => {
-    if (loading) return; // Cancel if waiting for a new count
-    try {
-      setLoading(true);
-      await backend.inc(); // Increment the count by 1
-      await fetchCount(); // Fetch the new count
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const handleConnectWallet = async () => {
     console.log('Connecting to the Connect Wallet');
     const result = await window.ic.plug.requestBalance();
     console.log({ result });
   };
+
   // Fetch the count on page load
   useEffect(() => {
     fetchCount();
@@ -56,13 +36,6 @@ function App() {
   return (
     <div className="App">
       <div>
-        {/* <button
-          onClick={() => ConnectWallet()}
-          style={{ opacity: loading ? 0.5 : 1 }}
-        >
-          Connect Wallet
-        </button> */}
-
         <a
           href="https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/motoko/"
           target="_blank"
