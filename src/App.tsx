@@ -1,6 +1,7 @@
 import PlugConnect from '@psychedelic/plug-connect';
 import { useEffect, useState } from 'react';
 import { backend } from './declarations/backend';
+import Layout from './components/Layout';
 
 function App() {
   const [count, setCount] = useState<number | undefined>();
@@ -32,15 +33,9 @@ function App() {
 
   return (
     <div className="">
-      <h1 className="">Vite + React + Motoko</h1>
-      <div className="bg-slate-700">
-        <PlugConnect
-          title="Connect Wallet"
-          onConnectCallback={handleConnectWallet}
-          host="http://127.0.0.1:4943"
-          whitelist={['bd3sg-teaaa-aaaaa-qaaba-cai']}
-        />
-      </div>
+      <Layout>
+  
+      </Layout>
     </div>
   );
 }
