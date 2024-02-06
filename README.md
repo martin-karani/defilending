@@ -2,11 +2,25 @@
 
 ### Get started directly in your browser:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/rvanasa/vite-react-motoko)
+This is a full-stack Web3 application on the [Internet Computer](https://internetcomputer.org/).
 
-This template gives you everything you need to build a full-stack Web3 application on the [Internet Computer](https://internetcomputer.org/).
 
-For an example of a real-world dapp built using this starter project, check out the [source code](https://github.com/dfinity/feedback) for DFINITY's [Developer Experience Feedback Board](https://dx.internetcomputer.org/).
+## Integrating Plug Connect Package from @Psychedelic using NPM CLI
+
+To integrate the Plug Connect package from @Psychedelic using the NPM CLI, follow these steps:
+
+1. **Ensure you have**:
+   - A personal access token (you can generate one [here](https://github.com/settings/tokens))
+   - The personal access token should have the appropriate scopes, including `repo` and `read:packages`, to gain access to the GitHub Package Registry.
+
+2. **Authenticate via npm login**:
+   
+   ```sh
+   npm login --registry=https://npm.pkg.github.com --scope=@Psychedelic
+
+This will prompt you to enter your GitHub username and personal access token.
+
+
 
 ## 📦 Create a New Project
 
@@ -29,7 +43,7 @@ When ready, run `dfx deploy --network ic` to deploy your application to the Inte
 - [Vite](https://vitejs.dev/): high-performance tooling for front-end web development
 - [React](https://reactjs.org/): a component-based UI library
 - [TypeScript](https://www.typescriptlang.org/): JavaScript extended with syntax for types
-- [Sass](https://sass-lang.com/): an extended syntax for CSS stylesheets
+- [Tailwindcss](https://tailwindcss.com/):for CSS stylesheets
 - [Prettier](https://prettier.io/): code formatting for a wide range of supported languages
 - [Motoko](https://github.com/dfinity/motoko#readme): a safe and simple programming language for the Internet Computer
 - [Mops](https://mops.one): an on-chain community package manager for Motoko
