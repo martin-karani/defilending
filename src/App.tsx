@@ -1,8 +1,5 @@
 import PlugConnect from '@psychedelic/plug-connect';
 import { useEffect, useState } from 'react';
-import './App.css';
-import motokoLogo from './assets/motoko_moving.png';
-import motokoShadowLogo from './assets/motoko_shadow.png';
 import { backend } from './declarations/backend';
 
 function App() {
@@ -34,26 +31,10 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <div>
-        <a
-          href="https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/motoko/"
-          target="_blank"
-        >
-          <span className="logo-stack">
-            <img
-              src={motokoShadowLogo}
-              className="logo motoko-shadow"
-              alt="Motoko logo"
-            />
-            <img src={motokoLogo} className="logo motoko" alt="Motoko logo" />
-          </span>
-        </a>
-      </div>
-      <h1>Vite + React + Motoko</h1>
-      <div className="card">
+    <div className="">
+      <h1 className="">Vite + React + Motoko</h1>
+      <div className="c bg-slate-700">
         <PlugConnect
-          dark
           title="Connect Wallet"
           onConnectCallback={handleConnectWallet}
           host="http://127.0.0.1:4943"
