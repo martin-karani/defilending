@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="">
       <h1 className="">Vite + React + Motoko</h1>
-      <div className="c bg-slate-700">
+      <div className="bg-slate-700">
         <PlugConnect
           title="Connect Wallet"
           onConnectCallback={handleConnectWallet}
