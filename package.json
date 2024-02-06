@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "setup": "npm i && dfx canister create backend && dfx generate backend && dfx deploy",
-    "start": "run-p frontend backend",
+    "start": "run-p frontend backend tailwindcss",
     "frontend": "vite --port 3000",
     "backend": "mo-dev --generate --deploy -y",
+    "tailwindcss":"npx tailwindcss -i ./src/index.css -o ./src/output.css --watch",
     "build": "tsc && vite build",
     "test": "run-s test:backend test:frontend",
     "test:frontend": "vitest run",
