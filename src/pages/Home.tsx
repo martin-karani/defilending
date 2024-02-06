@@ -13,7 +13,7 @@ function Home() {
 
   return (
     <div>
-      <h1 className="bg-black text-red-500">Vite + React + Motoko</h1>
+      <h1 className="">Vite + React + Motoko</h1>
       <div className="bg-slate-00">
         <PlugConnect
           title="Connect Wallet"
