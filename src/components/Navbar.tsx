@@ -12,10 +12,8 @@ const Navbar = () => {
     console.log({ result });
   };
 
-  const [currentPage, setCurrentPage] = useState('home');
-
   return (
-    <div className="bg-black flex justify-between px-8 text-white py-3 items-center">
+    <div className="bg-gray-800 flex justify-between px-8 text-white py-3 items-center">
       <h2 className="text-xl font-semibold">
         Difi-<span className="text-blue-600">lending</span>
       </h2>
@@ -29,7 +27,8 @@ const Navbar = () => {
       <div>
         <div className="bg-slate-00">
           <PlugConnect
-            title="Connect Wallet"
+            dark
+            title="Connect"
             onConnectCallback={handleConnectWallet}
             host={host}
             whitelist={[whitelist]}
