@@ -15,7 +15,7 @@ interface Loan {
   requestTX: string;
 }
 
-function LiquidityDeposit() {
+function LiquidityBorrow() {
   const [loanData, setLoanData] = useState<Loan[]>([
     {
       loan: '10,000 ADA',
@@ -77,7 +77,21 @@ function LiquidityDeposit() {
       requestTX:
         'b7c02582ce0d13ff249bd91053673e34b9550526495b030d30ecd8ef635792e5',
     },
-
+    {
+      loan: '44,000 ADA',
+      collateralValue: {
+        cryptocurrency: '22,800 LENFI',
+        defaultValue: '(~140,707.96 ADA)',
+      },
+      interest: '1.9%',
+      apr: '8.159%',
+      minimumCollateral: '836 ADA',
+      term: '85 days',
+      healthFactor: '1.57',
+      status: 'HEALTHY',
+      requestTX:
+        'b7c02582ce0d13ff249bd91053673e34b9550526495b030d30ecd8ef635792e5',
+    },
     {
       loan: '44,000 ADA',
       collateralValue: {
@@ -154,7 +168,7 @@ function LiquidityDeposit() {
                 </td>
                 <td className="px-6 py-4">
                   <button className="border border-[#28ebdd] rounded-md px-3 py-2 font-medium">
-                    BORROW
+                    DEPOSIT
                   </button>
                   <p className="text-xs mt-1">
                     Request TX: {loan.requestTX.slice(0, 5)}...
@@ -169,4 +183,4 @@ function LiquidityDeposit() {
   );
 }
 
-export default LiquidityDeposit;
+export default LiquidityBorrow;
